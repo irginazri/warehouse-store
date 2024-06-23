@@ -10,7 +10,8 @@ class BarangRepo {
       expired_date,
       kode_gudang,
     } = data;
-    const querySql = `INSERT INTO barang(nama_barang, harga_barang, jumlah_barang, expired_data, kode_gudang) VALUE(?, ?, ?, ?, ?)`;
+
+    const querySql = `INSERT INTO barang(nama_barang, harga_barang, jumlah_barang, expired_date, kode_gudang) VALUES (?, ?, ?, ?, ?)`;
     try {
       const [result] = await db.execute(querySql, [
         nama_barang,
@@ -72,7 +73,7 @@ class BarangRepo {
       expired_date,
       kode_gudang,
     } = data;
-    const querySql = `UPDATE barang SET nama_barang = ?, harga_barang = ?, jumlah_barang = ?, expired_barang = ? WHERE kode_barang = ? `;
+    const querySql = `UPDATE barang SET nama_barang = ?, harga_barang = ?, jumlah_barang = ?, expired_date = ? WHERE kode_barang = ? `;
     try {
       const [result] = await db.execute(querySql, [
         nama_barang,

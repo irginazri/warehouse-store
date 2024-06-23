@@ -2,7 +2,8 @@ const BarangUsecase = require("../Usecase/BarangUsecase");
 
 exports.createBarangHandle = async (req, res) => {
   try {
-    const barangData = await BarangUsecase.res.status(201).json({
+    const barangData = await BarangUsecase.createBarang(req.body);
+    res.status(201).json({
       message: "Create Barang Success",
       data: barangData,
     });

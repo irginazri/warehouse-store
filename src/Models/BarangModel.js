@@ -15,3 +15,5 @@ class BarangModels {
     this.kode_gudang = kode_gudang;
   }
 }
+
+module.exports = BarangModels;
