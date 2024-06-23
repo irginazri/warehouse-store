@@ -1,5 +1,8 @@
 ## DOCUMENTATION STORE-WAREHOUSE API
 
+DESCRIPTION API :
+This API provides endpoints for managing warehouse and goods data. It supports operations such as creating, retrieving, updating, and deleting records, as well as specific queries for expired and soon-to-expire goods. 
+
 BASE URL :
 http://localhost:3030/api
 
